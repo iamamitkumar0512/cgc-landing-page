@@ -1,0 +1,259 @@
+@media (min-width: 1201px){
+    #content {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(2, 300px) repeat(3, 500px) 250px;
+        grid-template-areas:
+        "cgc cgc cgc cgc cgc ab ab ab"
+        "cgc cgc cgc cgc cgc ab ab ab"
+        "cr cr cr cr cr cr cr cr"
+        "ad ad ad ad ad ad ad ad"
+        "co co co co co co co co"
+        "tt tt tt tt tt tt tt tt";
+        justify-content: center;
+        align-content: center;
+    }
+
+
+
+    #content-about {
+        grid-area: ab;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        padding-right: 10px;
+        top:0;
+    }
+
+    .aboutText {
+        width: 400px;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+        color: #444;
+        top: 0;
+    }
+
+    #content-cgc{
+        grid-area: cgc;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .collegeCard {
+        width: 800px;
+        height:500px;
+        background: url("../images/cgc.jpg");
+        background-size: cover;
+        background-repeat: round;
+        margin-bottom: 20px;
+    }
+
+    #content-cgc:hover, button:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    }
+
+    @keyframes shake {
+    0% { transform: translate(2px, 0px) rotate(0deg); }
+    10% { transform: translate(-2px, -2px) rotate(-2deg); }
+    20% { transform: translate(-3px, 0px) rotate(-1deg); }
+    30% { transform: translate(3px, 1px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(2deg); }
+    50% { transform: translate(-1px, 2px) rotate(0deg); }
+    60% { transform: translate(-3px, 1px) rotate(-1deg); }
+    70% { transform: translate(3px, 0px) rotate(-2deg); }
+    80% { transform: translate(-2px, 0px) rotate(0deg); }
+    90% { transform: translate(1px, 2px) rotate(1deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    #content-courses {
+        grid-area: cr;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 70%;
+        grid-template-areas:
+        "corTitle"
+        "corCards";
+        justify-content: center;
+        align-items: center;
+        border-top: solid 45px;
+        border-color: rgb(83, 155, 170, 0.4);
+    }
+
+    .corTitle {
+        grid-area: corTitle;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3.0em;
+    }
+
+    .corCards {
+        grid-area: corCards;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .card {
+        width: 200px;
+        height: 350px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .card img {
+        width: 175px;
+        height: 350px;
+    }
+
+    .card p {
+        padding-top: 5px;
+    }
+
+
+    #content-advantage {
+        grid-area: ad;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 70%;
+        grid-template-areas:
+        "advTitle"
+        "advCards";
+        justify-content: center;
+        align-items: center;
+        border-top: solid 45px;
+        border-color: rgb(83, 175, 155, 0.4);
+    }
+
+    .advTitle {
+        grid-area: advTitle;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3em;
+    }
+
+
+    .advCards {
+        grid-area: advCards;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .advantageCard {
+        width: 200px;
+        height: 250px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .card img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .advantageCard p {
+        padding: 5px 0 8px 0;
+    }
+
+    #content-contact {
+        grid-area: co;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 60%;
+        grid-template-areas:
+        "conTitle"
+        "conCards";
+        justify-content: center;
+        align-items: center;
+        border-top: solid 45px;
+        border-color: rgb(83, 175, 155, 0.4);
+    }
+
+    .conTitle {
+        grid-area: conTitle;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3em;
+    }
+
+
+    .conCards {
+        grid-area: conCards;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .contactCard {
+        width: 175px;
+        height: 175px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 100px;
+    }
+    .card img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .contactCard p {
+        padding: 5px 0 8px 0;
+    }
+
+    #content-testimonials {
+        grid-area: tt;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border-top: solid 45px;
+        border-color: rgb(83, 175, 155, 0.4);
+    }
+
+    #quoteBox {
+        width: 500px;
+        height: 250px;
+        color: white;
+        border-radius: 12px;
+        padding: 20px;
+    }
+
+    .quote {
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    .person {
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+}
+
+    

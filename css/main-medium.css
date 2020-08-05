@@ -1,0 +1,360 @@
+@media (min-width: 801px) and (max-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 2050px 90px;
+        grid-template-areas:
+        "head"
+        "content"
+        "foot";
+        justify-content: center;
+        align-content: center;
+        background-image: linear-gradient(to bottom right,rgb(83, 165, 165), #444);
+    }
+
+
+	#head {
+	display: grid;
+	grid-area: head;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: 40% 60%;
+	grid-template-rows: 100%;
+	grid-template-areas:
+	"brand nav";
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	margin: 5px 0 5px 0;
+	padding: 6px 0 6px 0;
+	background: #02042c;
+	top:0;
+	}
+
+	#brand {
+	    grid-area: brand;
+	    width: 170px;
+	    height: 50px;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    margin-left: 10px;
+	}
+
+	.navbar {
+	    grid-area: nav;
+	    display: flex;
+	    flex-direction: row;
+	    align-items: center;
+	    justify-content: space-between;
+	    padding-right: 5%;
+	    color: rgb(0, 0, 0);
+	    font-size: 1.1em;
+	}
+
+	ul,li,p {
+	    list-style-type: none;
+	    text-align: center;
+	    margin: 0;
+	    padding: 0;
+	}
+
+	button {
+	    background: #444;
+	    width: 80px;
+	    height: 30px;
+	    color: white;
+	    border-radius: 10px;
+	    margin: 0;
+	    padding: 0;
+	    font-size: 1em;
+	}
+
+	button:hover {
+	    color: rgb(150, 226, 154);
+	    background: white;
+	}
+
+
+
+	a:link, a:visited {
+	text-decoration: none;
+	color: white;
+	}
+
+	a:hover {
+	    text-decoration: underline;
+	}
+
+	a:active {
+	    text-decoration: none;
+	    color: rgb(141, 211, 144);
+	}
+    .box .a-state{
+        background: #333;
+        color: #fff;
+        transition: ease 0.3s all;
+
+    }
+
+	#foot {
+	    grid-area: foot;
+	    color: white;
+	    border-radius: 5px;
+	    justify-content: center;
+	    text-align: center;
+	    border: 2px solid #222;
+	    background-color: #444;
+	}
+
+	#content {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(2, 250px) repeat(3, 400px) 250px;
+        grid-template-areas:
+        "cgc cgc cgc cgc ab ab ab ab"
+        "cgc cgc cgc cgc ab ab ab ab"
+        "cr cr cr cr cr cr cr cr"
+        "ad ad ad ad ad ad ad ad"
+        "co co co co co co co co"
+        "tt tt tt tt tt tt tt tt";
+        justify-content: center;
+        align-content: center;
+    }
+
+
+
+    #content-about {
+        grid-area: ab;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3em;
+        padding-right: 10px;
+        top:0;
+    }
+
+    .aboutText {
+        width: 300px;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+        color: #444;
+        top: 0;
+    }
+
+    #content-cgc{
+        grid-area: cgc;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .collegeCard {
+        width: 400px;
+        height:480px;
+        background: url("../images/cgc.jpg");
+        background-size: cover;
+        background-repeat: round;
+        margin-bottom: 20px;
+    }
+
+    #content-cgc:hover, button:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    }
+
+    @keyframes shake {
+    0% { transform: translate(2px, 0px) rotate(0deg); }
+    10% { transform: translate(-2px, -2px) rotate(-2deg); }
+    20% { transform: translate(-3px, 0px) rotate(-1deg); }
+    30% { transform: translate(3px, 1px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(2deg); }
+    50% { transform: translate(-1px, 2px) rotate(0deg); }
+    60% { transform: translate(-3px, 1px) rotate(-1deg); }
+    70% { transform: translate(3px, 0px) rotate(-2deg); }
+    80% { transform: translate(-2px, 0px) rotate(0deg); }
+    90% { transform: translate(1px, 2px) rotate(1deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    #content-courses {
+        grid-area: cr;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 90%;
+        grid-template-areas:
+        "corTitle"
+        "corCards";
+        justify-content: center;
+        align-items: center;
+        border-top: solid 45px;
+        border-color: rgb(83, 155, 170, 0.4);
+    }
+
+    .corTitle {
+        grid-area: corTitle;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .corCards {
+        grid-area: corCards;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .card {
+        width: 125px;
+        height: 250px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .card img {
+        width: 125px;
+        height: 200px;
+    }
+
+    .card p {
+        padding-top: 5px;
+    }
+
+
+    #content-advantage {
+        grid-area: ad;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 90%;
+        grid-template-areas:
+        "advTitle"
+        "advCards";
+        justify-content: center;
+        align-items: center;
+        border-top: solid 45px;
+        border-color: rgb(83, 175, 155, 0.4);
+    }
+
+    .advTitle {
+        grid-area: advTitle;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2em;
+    }
+
+
+    .advCards {
+        grid-area: advCards;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .advantageCard {
+        width: 200px;
+        height: 250px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        font-size: 1.5em;
+    }
+ 
+    .advantageCard p {
+        padding: 5px 0 8px 0;
+    }
+
+    #content-contact {
+        grid-area: co;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 90%;
+        grid-template-areas:
+        "conTitle"
+        "conCards";
+        justify-content: center;
+        align-items: center;
+        border-top: solid 45px;
+        border-color: rgb(83, 175, 155, 0.4);
+    }
+
+    .conTitle {
+        grid-area: conTitle;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2em;
+    }
+
+
+    .conCards {
+        grid-area: conCards;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .contactCard {
+        width: 200px;
+        height: 250px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom: 50px;
+    }
+
+
+    .contactCard p {
+        padding: 5px 0 8px 0;
+    }
+
+    #content-testimonials {
+        grid-area: tt;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border-top: solid 45px;
+        border-color: rgb(83, 175, 155, 0.4);
+    }
+
+    #quoteBox {
+        width: 490px;
+        height: 310px;
+        color: white;
+        border-radius: 12px;
+        padding: 20px;
+    }
+
+    .quote {
+        font-size: 1.6em;
+        text-align: center;
+    }
+
+    .person {
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+
+}
+	
+

@@ -1,0 +1,87 @@
+@media (min-width: 1201px){
+	#head {
+	display: grid;
+	grid-area: head;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: 55% 45%;
+	grid-template-rows: 100%;
+	grid-template-areas:
+	"brand nav";
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	margin: 5px 0 5px 0;
+	padding: 6px 0 6px 0;
+	background: #02042c;
+	top:0;
+	}
+
+	#brand {
+	    grid-area: brand;
+	    width: 200px;
+	    height: 50px;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    margin-left: 10px;
+	}
+
+	.navbar {
+	    grid-area: nav;
+	    display: flex;
+	    flex-direction: row;
+	    align-items: center;
+	    justify-content: space-between;
+	    padding-right: 5%;
+	    color: rgb(0, 0, 0);
+	    font-size: 1.2em;
+	}
+
+	ul,li,p {
+	    list-style-type: none;
+	    text-align: center;
+	    margin: 0;
+	    padding: 0;
+	}
+
+	button {
+	    background: #444;
+	    width: 100px;
+	    height: 40px;
+	    color: white;
+	    border-radius: 10px;
+	    margin: 0;
+	    padding: 0;
+	    font-size: 1em;
+	}
+
+	button:hover {
+	    color: rgb(150, 226, 154);
+	    background: white;
+	}
+
+
+
+	a:link, a:visited {
+	text-decoration: none;
+	color: white;
+	}
+
+	a:hover {
+	    text-decoration: underline;
+	}
+
+	a:active {
+	    text-decoration: none;
+	    color: rgb(141, 211, 144);
+	}
+	.navbar-item .a-state{
+		background: #333;
+    	color: #fff;
+    	transition: ease 0.3s all;
+
+	}
+
+}
+	
+
